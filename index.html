@@ -5,97 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koleszár Gábor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header id="page-top">
-        <div>
-            <img src="./img/cv.jpg" alt="Koleszár Gábor">
-            <h1>Koleszár Gábor</h1>
-            <h2>Webfejlesztő</h2>
+    <header class="main-header" id="page-top">
+        <div class="head-container">
+            <div class="head-title">
+                <h1>Koleszár Gábor</h1>
+                <h2 class="header-txt">Fullstack Webfejlesztő</h2>
+                <a href="#contact" class="btn btn-head">Keressen fel</a>
+            </div>
         </div>
         <nav class="main-nav">
             <input type="checkbox" name="hamburger" id="input-hamburger">
             <label for="input-hamburger" class="hamburger-btn">
-                <span class="hamburger-line"></span>
+                <span class="hamburger-line hbg-line-top"></span>
+                <span class="hamburger-line hbg-line-middle"></span>
+                <span class="hamburger-line hbg-line-bottom"></span>
             </label>
-            <ul>
-                <li><a href="#introdustion">Magamról</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Kapcsolat</a></li>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html#introduction">Magamról</a></li>
+                <li class="menu-item"><a href="index.html#portfolio">Portfolio</a></li>
+                <li class="menu-item"><a href="index.html#contact">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
+    <div class="gradient-header-border"></div>
     <main>
-        <section class="about" id="introduction">
+        <section class="about content-box" id="introduction">
             <h2>Magamról</h2>
-            <p>Évek óta foglalkozom webfejlesztéssel. Eleinte saját magamtól, az internetet segítségül 
-                hívva kezdtem tanulmányozni a <strong>HTML</strong> és <strong>CSS</strong> nyelveket. Statikus weeblapokat készítettem 
-                saját szórakoztatásomra.
-            </p>
-            <p>
-                Később, hogy kis dinamikát is vigyek az oldalakba az űrlapokba bevitt adatok tárolása 
-                kedvééret, a PHP felé fordult érdeklődésem. Szerver oldalon a <strong>PHP</strong> mellett megismerkedtem
-                a SQL alapjaival, így már képes voltam adatokat tárolni és lekérdezni.
-            </p>
-            <p>
-                Tudásom teljessé csak a <strong>Javascript</strong> megismerése után vált. Ezzel az ismerettel már sokkal
-                élőbbé tudtam varázsolni a weboldalakat.
-            </p>
+            <img src="./img/cv.jpg" alt="Koleszár Gábor" class="photo">
+            <div class="about-txt">
+                <p>Évek óta foglalkozom webfejlesztéssel. Eleinte saját magamtól, az internetet segítségül 
+                    hívva kezdtem tanulmányozni a <strong>HTML</strong> és <strong>CSS</strong> nyelveket. Statikus weeblapokat készítettem 
+                    saját szórakoztatásomra.
+                </p>
+                <p>
+                    Később, hogy kis dinamikát is vigyek az oldalakba az űrlapokba bevitt adatok tárolása 
+                    kedvééret, a PHP felé fordult érdeklődésem. Szerver oldalon a <strong>PHP</strong> mellett megismerkedtem
+                    a SQL alapjaival, így már képes voltam adatokat tárolni és lekérdezni.
+                </p>
+                <p>
+                    Tudásom teljessé csak a <strong>Javascript</strong> megismerése után vált. Ezzel az ismerettel már sokkal
+                    élőbbé tudtam varázsolni a weboldalakat.
+                </p>
+            </div>
         </section>
-        <section id="portfolio">
+        <section id="portfolio" class="content-box">
             <h2>Portfolió</h2>
-            <section>
-                <img src="./img/placeholder.jpg" alt="portfolio1">
+            <section class="portfolio-item">
+                <img src="./img/placeholder.jpg" alt="portfolio1" class="portfolio-img">
                 <h3>Portfolió 1</h3>
                 <p>Ide kerül a portfolió munka rövid leírása</p>
-                <a href="#">Link portfolió 1</a>
+                <a href="#" class="btn">Megnézem</a>
             </section>
-            <section>
-                <img src="./img/placeholder.jpg" alt="portfolio2">
+            <section class="portfolio-item">
+                <img src="./img/placeholder.jpg" alt="portfolio2" class="portfolio-img">
                 <h3>Portfolió 2</h3>
                 <p>Ide kerül a portfolió munka rövid leírása</p>
-                <a href="#">Link portfolió 2</a>
+                <a href="#" class="btn">Megnézem</a>
             </section>
-            <section>
-                <img src="./img/placeholder.jpg" alt="portfolio3">
+            <section class="portfolio-item">
+                <img src="./img/placeholder.jpg" alt="portfolio3" class="portfolio-img">
                 <h3>Portfolió 3</h3>
                 <p>Ide kerül a portfolió munka rövid leírása</p>
-                <a href="#">Link portfolió 3</a>
+                <a href="#" class="btn">Megnézem</a>
             </section>
-            <section>
-                <img src="./img/placeholder.jpg" alt="portfolio4">
+            <section class="portfolio-item">
+                <img src="./img/placeholder.jpg" alt="portfolio4" class="portfolio-img">
                 <h3>Portfolió 4</h3>
                 <p>Ide kerül a portfolió munka rövid leírása</p>
-                <a href="#">Link portfolió 4</a>
+                <a href="#" class="btn">Megnézem</a>
             </section>
-            <section>
-                <img src="./img/placeholder.jpg" alt="portfolio5">
+            <section class="portfolio-item">
+                <img src="./img/placeholder.jpg" alt="portfolio5" class="portfolio-img">
                 <h3>Portfolió 5</h3>
                 <p>Ide kerül a portfolió munka rövid leírása</p>
-                <a href="#">Link portfolió 5</a>
+                <a href="#" class="btn">Megnézem</a>
             </section>
-            <section>
-                <img src="./img/placeholder.jpg" alt="portfolio6">
+            <section class="portfolio-item">
+                <img src="./img/placeholder.jpg" alt="portfolio6" class="portfolio-img">
                 <h3>Portfolió 6</h3>
                 <p>Ide kerül a portfolió munka rövid leírása</p>
-                <a href="#">Link portfolió 6</a>
+                <a href="#" class="btn">Megnézem</a>
             </section>
         </section>
-        <section id="contact">
+        <section id="contact" class="content-box">
             <h2>Kapcsolat</h2>
-            <p>Email: <a href="mailto:koleszargabor17@gmail.com">koleszargabor17@gmail.com</a></p>
-            <p>Telefon: +36 30/123-4567</p>
+            <form action="https://formspree.io/f/xdobqvwd" method="post" class="contact-form">
+                <div class="form-element">
+                    <label for="full-name">Név:</label>
+                    <input type="text" name="full-name" id="full-name" class="form-field" placeholder="az ön teljes neve..." required>
+                </div>
+                <div class="form-element">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="form-field" placeholder="az ön email címe..." required>
+                </div>
+                <div class="form-elemet">
+                    <label for="msg">Üzenet:</label>
+                    <textarea name="msg" id="msg" class="form-field msg-box" placeholder="Az ön üzenete..." required></textarea>
+                </div>
+                <div class="form-element">
+                    <input type="submit" name="send-msg" value="Küldés" class="btn btn-form">
+                </div>
+            </form>
         </section>
     </main>
     <footer>
-        <div class="copyrights">KoleszárGábor&copy;</div>
         <ul class="footer-menu">
             <li class="footer-menu-item"><a href="#introduction">Bemutatkozás</a></li>
             <li class="footer-menu-item"><a href="#portfolio">Portfolió</a></li>
             <li class="footer-menu-item"><a href="#contact">Kapcsolat</a></li>
         </ul>
-        <a href="#page-top">A lap tetejére</a>
+        <a href="#page-top" class="floating-btn"><i class="fa-solid fa-angle-up"></i></a>
+        <div class="socialmedia-icons">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="copyrights">Koleszár Gábor &copy;</div>
     </footer>
 </body>
 </html>
