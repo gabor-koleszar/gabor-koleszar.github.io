@@ -157,7 +157,7 @@ h3 {
 }
 
 main{
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .content-box {
@@ -204,6 +204,11 @@ main{
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+}
+
+.portfolio-head {
+    align-self: flex-start;
+    margin-bottom: 4rem;
 }
 
 .portfolio-img{
@@ -261,6 +266,10 @@ a.btn-head:hover {
     margin: auto;
 }
 
+.form-element {
+    width: 100%;
+}
+
 label {
     display: none;
 }
@@ -273,6 +282,11 @@ label {
     font-size: 1.8rem;
     padding: 1.5rem 1rem;
     margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.form-field::placeholder {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .msg-box {
@@ -338,4 +352,87 @@ footer {
 
 .copyrights {
     margin-top: 3rem;
+}
+
+@media screen and (min-width: 576px) {
+    .main-header {
+        padding: 1.5rem 2.5rem;
+    }
+
+    main{
+        padding: 1.5rem 2.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-header {
+        padding: 1.5rem 5.5rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .header-txt {
+        font-size: 3.5rem;
+    }
+
+    main{
+        padding: 1.5rem 3.5rem;
+    }
+
+    .about {
+        grid-template-areas: 
+            "header header"
+            "txt img";
+    }
+
+    .photo {
+        width: 80%;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    .about-txt {
+        margin-top: 6rem;
+    }
+
+    .portfolio-item {
+        display: grid;
+        grid-template-areas: 
+            "img description"
+            "img description"
+            "img btn";
+        margin-bottom: 1rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--color-main-font);
+    }
+
+    .portfolio-img {
+        grid-area: img;
+        width: 80%;
+    }
+
+    .portfolio-txt-container {
+        grid-area: description;
+    }
+
+    .portfolio-item a {
+        grid-area: btn;
+        align-self: end;
+        justify-self: start;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    h3 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
 }
