@@ -216,7 +216,8 @@ main{
 }
 
 .portfolio-item {
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
 }
@@ -378,7 +379,10 @@ footer {
         padding: 1.5rem 2.5rem;
     }
 
-    
+    .portfolio-img {
+        width: 70%;
+        margin: 0 auto 2rem auto;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -461,5 +465,12 @@ footer {
     h3 {
         font-size: 3rem;
         margin-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        padding-right: 20rem;
+        padding-left: 20rem;
     }
 }
