@@ -176,12 +176,27 @@ main{
     grid-area: header;
 }
 
+.photo-container {
+    position: relative;
+    justify-self: center;
+    margin: 3rem 0;
+}
+
 .photo {
-    width: 50%;
+    width: 250px;
     max-width: 300px;
     height: auto;
     border-radius: 5px;
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
+}
+
+.photo-gradient-layer {
+    width: 250px;
+    height: 100%;
+    background-image: radial-gradient(rgba(66, 62, 59, 0) 40%, var(--color-dark-gray) 60%);
+    position: absolute;
+    top: 0;
+    z-index: 40;
 }
 
 .about-txt {
@@ -362,6 +377,8 @@ footer {
     main{
         padding: 1.5rem 2.5rem;
     }
+
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -392,10 +409,20 @@ footer {
             "txt img";
     }
 
+    .photo-container {
+        margin: 0 0 0 3rem;
+    }
+
     .photo {
-        width: 80%;
-        max-width: 300px;
+        width: 240px;
+        height: 336px;
         margin: 0;
+    }
+
+    .photo-gradient-layer {
+        width: 240px;
+        height: 336px;
+        background-image: radial-gradient(rgba(66, 62, 59, 0) 50%, var(--color-dark-gray) 70%);
     }
 
     .about-txt {
