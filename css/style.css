@@ -16,6 +16,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -466,10 +467,54 @@ footer {
         font-size: 3rem;
         margin-bottom: 3rem;
     }
+
+    .main-header {
+        position: relative;
+    }
+
+    .hamburger-btn {
+        display: none;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 80;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 1rem 5.5rem;
+        background-color: rgba(142, 141, 190, 0);
+        background-image: linear-gradient(var(--color-purple) 50%, rgba(142, 141, 190, 0));
+    }
+
+    .menu {
+        visibility: visible;
+        position: static;
+        height: auto;
+        opacity: 1;
+        top: auto;
+        right: auto;
+        width: auto;
+        transition: none;
+        padding-top: 0;
+        display: flex;
+        background-color: inherit;
+    }
+
+    .menu-item a {
+        width: auto;
+    }
+
+    .menu-item a:hover {
+        border-bottom: 2px solid var(--color-main-font);
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    main {
+
+    main, .main-header, .main-nav {
         padding-right: 20rem;
         padding-left: 20rem;
     }
