@@ -194,7 +194,7 @@ main{
 .photo-gradient-layer {
     width: 250px;
     height: 100%;
-    background-image: radial-gradient(rgba(66, 62, 59, 0) 40%, var(--color-dark-gray) 60%);
+    background-image: radial-gradient(rgba(66, 62, 59, 0) 40%, var(--color-dark-gray) 100%);
     position: absolute;
     top: 0;
     z-index: 40;
@@ -424,11 +424,11 @@ footer {
         margin: 0;
     }
 
-    .photo-gradient-layer {
+    /* .photo-gradient-layer {
         width: 240px;
         height: 336px;
         background-image: radial-gradient(rgba(66, 62, 59, 0) 50%, var(--color-dark-gray) 70%);
-    }
+    } */
 
     .about-txt {
         margin-top: 6rem;
