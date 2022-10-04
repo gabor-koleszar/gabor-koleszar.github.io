@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="./mastermind.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Mastermind</h1>
+    </header>
+    <main>
+        <div class="start-game-container">
+            <button class="btn js-start-game">Új játék</button>
+        </div>
+
+        <section class="guess guess-hidden js-guess">
+            <h2>Tippek</h2>
+            <form action="#" class="guess-form js-guess-form">
+                <div class="nums">
+                    <input type="number" name="num1" id="num1" min="0" max="9" value="0">
+                    <input type="number" name="num2" id="num2" min="0" max="9" value="0">
+                    <input type="number" name="num3" id="num3" min="0" max="9" value="0">
+                    <input type="number" name="num4" id="num4" min="0" max="9" value="0">
+                </div>
+                <button type="submit" class="btn">Indít</button>
+            </form>
+        </section>
+        <section class="result-container result-container-hidden js-result-container">
+            <h2 class="result-heading">Eredmény</h2>
+            <div class="result js-result"></div>
+        </section>
+    </main>
+    <script src="./mastermind.js"></script>
+</body>
+</html>
