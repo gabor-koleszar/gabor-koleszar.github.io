@@ -217,6 +217,7 @@ main{
 }
 
 .portfolio-item {
+    width: 100%;
     margin-top: 4rem;
     margin-bottom: 4rem;
     display: flex;
@@ -436,6 +437,7 @@ footer {
 
     .portfolio-item {
         display: grid;
+        gap: 2rem;
         grid-template-areas: 
             "img description"
             "img description"
@@ -453,6 +455,10 @@ footer {
 
     .portfolio-txt-container {
         grid-area: description;
+    }
+
+    .portfolio-txt-container p {
+        width: 100%;
     }
 
     .portfolio-item a {

@@ -59,6 +59,14 @@ h2 {
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.8);
 }
 
+.btn-disabled {
+    background-color: grey;
+}
+
+.btn-disabled:hover {
+    box-shadow: none;
+}
+
 .guess {
     padding: 1rem 3rem;
 }
@@ -134,6 +142,13 @@ h2 {
 
 .black-square {
     background-color: black;
+}
+
+.winn {
+    color: brown;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
 }
 
 @media (min-width: 290px) {

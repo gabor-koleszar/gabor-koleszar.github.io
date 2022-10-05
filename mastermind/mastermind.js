@@ -1,6 +1,8 @@
 const startGame = document.querySelector(".js-start-game");
+const startBtn = document.querySelector(".js-start-game-btn")
 const resultContainer = document.querySelector(".js-result-container");
 const resultOutput = document.querySelector(".js-result");
+const winnOutput = document.querySelector(".js-winn");
 const guessSection = document.querySelector(".js-guess");
 const guessForm = document.querySelector(".js-guess-form");
 const num1Input = document.querySelector("[name=num1]");
@@ -15,7 +17,6 @@ function generateSecretCode() {
     for (let i = 0; i < 4; i++) {
         secretArr.push(Math.trunc(Math.random() * 10));
     }
-    console.log(secretArr);
 }
 
 function identicalMatch(secret, guess) {
@@ -102,6 +103,20 @@ function showResult(whiteSquares, blackSquares, emptySquares) {
     resultOutput.innerHTML = html;
 }
 
+function renderGameResult(whiteSquares) {
+    let gameResult = "";
+
+    if (whiteSquares === 4) {
+        gameResult = "Nyertél"
+    } else {
+        gameResult = "Vesztettél";
+    }
+
+    winnOutput.innerHTML = `
+        <p>${gameResult}</p>
+    `;
+}
+
 function evaluateInput(event) {
     event.preventDefault();
     rounds++;
@@ -119,13 +134,14 @@ function evaluateInput(event) {
     let blackSquares = matchArr[1];
     let emptySquares = matchArr[2];
 
-    console.log(secretArr);
-    console.log(guessArr);
-    console.log(whiteSquares);
-    console.log(blackSquares);
-    console.log(emptySquares);
+    if (whiteSquares === 4 || rounds >= 10) {
+        startBtn.disabled = true;
+        startBtn.classList.add("btn-disabled");
+        renderGameResult(whiteSquares);
+    }
 
     showResult(whiteSquares, blackSquares, emptySquares);
+
 }
 
 function newGame(event) {
@@ -135,12 +151,18 @@ function newGame(event) {
         guessSection.classList.add("guess-show");
     }
 
+    if (startBtn.disabled === true) {
+        startBtn.disabled = false;
+        startBtn.classList.remove("btn-disabled");
+    }
+
     secretArr = [];
     guessArr = [];
     num1Input.value = 0;
     num2Input.value = 0;
     num3Input.value = 0;
     num4Input.value = 0;
+    winnOutput.innerHTML = '';
     rounds = 0;
 
     if (resultContainer.classList.contains("result-container-show")) {
