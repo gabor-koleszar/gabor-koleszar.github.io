@@ -84,13 +84,7 @@ function drawSquares(whiteSquares, blackSquares, emptySquares) {
 }
 
 function drawGuess() {
-    let html = '';
-
-    for (let num of guessArr) {
-        html += `<div class="guess-num">${num}</div>`;
-    }
-
-    return html;
+    return guessArr.map(num => `<div class="guess-num">${num}</div>`).join();
 }
 
 function showResult(whiteSquares, blackSquares, emptySquares) {
