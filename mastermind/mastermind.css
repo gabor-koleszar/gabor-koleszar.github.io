@@ -37,11 +37,48 @@ h2 {
     font-size: 1.3rem;
 }
 
+.info-container {
+    position: relative;
+}
+
 .info-icon {
     font-size: 2rem;
     color: blueviolet;
     margin-top: 1rem;
     cursor: pointer;
+}
+
+.rules-container {
+    position: absolute;
+    margin-top: 1rem;
+    background-color: brown;
+    color: azure;
+    padding: 1rem;
+    border: 2px solid rgb(88, 6, 6);
+    border-radius: 2px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.rules-headeing {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.rules-txt {
+    font-size: 1.4rem;
+}
+
+.rules-txt p {
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
 }
 
 .start-game-container {

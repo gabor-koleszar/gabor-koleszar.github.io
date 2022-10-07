@@ -7,6 +7,8 @@ const guessSection = document.querySelector(".js-guess");
 const guessForm = document.querySelector(".js-guess-form");
 const errContainer = document.querySelector(".js-err");
 const guessInput = document.querySelector("[name=guess-num]");
+const infoIcon = document.querySelector(".js-info-icon");
+const rulesContainer = document.querySelector(".js-rules-container");
 let guessArr = [];
 let secretArr = [];
 let rounds = 0;
@@ -175,8 +177,14 @@ function newGame(event) {
     generateSecretCode();
 }
 
+function toggleRules() {
+    rulesContainer.classList.toggle("d-none");
+}
+
 startGame.addEventListener("click", newGame);
 guessForm.addEventListener("submit", evaluateInput);
+infoIcon.addEventListener("mouseenter", toggleRules);
+infoIcon.addEventListener("mouseleave", toggleRules);
 
 
 
