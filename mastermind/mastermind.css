@@ -37,6 +37,13 @@ h2 {
     font-size: 1.3rem;
 }
 
+.info-icon {
+    font-size: 2rem;
+    color: blueviolet;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
 .start-game-container {
     padding: 1rem;
     display: flex;
