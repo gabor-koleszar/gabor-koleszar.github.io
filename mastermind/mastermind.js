@@ -5,10 +5,8 @@ const resultOutput = document.querySelector(".js-result");
 const winnOutput = document.querySelector(".js-winn");
 const guessSection = document.querySelector(".js-guess");
 const guessForm = document.querySelector(".js-guess-form");
-const num1Input = document.querySelector("[name=num1]");
-const num2Input = document.querySelector("[name=num2]");
-const num3Input = document.querySelector("[name=num3]");
-const num4Input = document.querySelector("[name=num4]");
+const errContainer = document.querySelector(".js-err");
+const guessInput = document.querySelector("[name=guess-num]");
 let guessArr = [];
 let secretArr = [];
 let rounds = 0;
@@ -39,9 +37,9 @@ function identicalMatch(secret, guess) {
 function halfMatch(secret, guess) {
     let guessCopy = guess.slice();
     let match = 0;
-    for (let j in secret) {
-        if (guessCopy.includes(secret[j])) {
-            guessCopy.splice(guessCopy.indexOf(secret[j]), 1);
+    for (let secretNum of secret) {
+        if (guessCopy.includes(secretNum)) {
+            guessCopy.splice(guessCopy.indexOf(secretNum), 1);
             match++;
         }
     }
@@ -85,6 +83,16 @@ function drawSquares(whiteSquares, blackSquares, emptySquares) {
     return html;
 }
 
+function drawGuess() {
+    let html = '';
+
+    for (let num of guessArr) {
+        html += `<div class="guess-num">${num}</div>`;
+    }
+
+    return html;
+}
+
 function showResult(whiteSquares, blackSquares, emptySquares) {
     if (resultContainer.classList.contains("result-container-hidden")) {
         resultContainer.classList.remove("result-container-hidden");
@@ -92,15 +100,17 @@ function showResult(whiteSquares, blackSquares, emptySquares) {
     }
 
     const squares = drawSquares(whiteSquares, blackSquares, emptySquares);
+    const guessNums = drawGuess();
     
-    html = `
-        <div class="square-container">
+    let html = `
+        <div class="round-container">
             <div class="rounds">${rounds}</div>
-            ${squares}
+            <div class="square-container">${squares}</div>
+            <div class="guess-container">${guessNums}</div>
         </div>
     `;
 
-    resultOutput.innerHTML = html;
+    resultOutput.innerHTML += html;
 }
 
 function renderGameResult(whiteSquares) {
@@ -112,35 +122,35 @@ function renderGameResult(whiteSquares) {
         gameResult = "Vesztettél";
     }
 
-    winnOutput.innerHTML = `
-        <p>${gameResult}</p>
-    `;
+    winnOutput.innerHTML = gameResult;
 }
 
 function evaluateInput(event) {
     event.preventDefault();
-    rounds++;
-    // reset guess values
-    guessArr = [];
-    // get guess values
-    guessArr.push(parseInt(num1Input.value));
-    guessArr.push(parseInt(num2Input.value));
-    guessArr.push(parseInt(num3Input.value));
-    guessArr.push(parseInt(num4Input.value));
     
-    const matchArr = match(secretArr, guessArr);
+    const guessValue = guessInput.value;
 
-    let whiteSquares = matchArr[0];
-    let blackSquares = matchArr[1];
-    let emptySquares = matchArr[2];
+    if (guessValue.length === 4) {
+        errContainer.innerHTML = "";
+        rounds++;
+        guessArr = [];
+        guessArr = [...guessValue].map(num => parseInt(num));
+        const matchArr = match(secretArr, guessArr);
 
-    if (whiteSquares === 4 || rounds >= 10) {
-        startBtn.disabled = true;
-        startBtn.classList.add("btn-disabled");
-        renderGameResult(whiteSquares);
+        let whiteSquares = matchArr[0];
+        let blackSquares = matchArr[1];
+        let emptySquares = matchArr[2];
+
+        if (whiteSquares === 4 || rounds >= 10) {
+            startBtn.disabled = true;
+            startBtn.classList.add("btn-disabled");
+            renderGameResult(whiteSquares);
+        }
+
+        showResult(whiteSquares, blackSquares, emptySquares);
+    } else {
+        errContainer.innerHTML = '<p class="err">Négy számjegyből kell állnia a kódnak.</p>';
     }
-
-    showResult(whiteSquares, blackSquares, emptySquares);
 
 }
 
@@ -158,12 +168,10 @@ function newGame(event) {
 
     secretArr = [];
     guessArr = [];
-    num1Input.value = 0;
-    num2Input.value = 0;
-    num3Input.value = 0;
-    num4Input.value = 0;
+    guessInput.value = 0;
     winnOutput.innerHTML = '';
     rounds = 0;
+    resultOutput.innerHTML = '';
 
     if (resultContainer.classList.contains("result-container-show")) {
         resultContainer.classList.remove("result-container-show");
