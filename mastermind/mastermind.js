@@ -9,6 +9,7 @@ const errContainer = document.querySelector(".js-err");
 const guessInput = document.querySelector("[name=guess-num]");
 const infoIcon = document.querySelector(".js-info-icon");
 const rulesContainer = document.querySelector(".js-rules-container");
+const roundsRemains = document.querySelector(".js-rounds-remains");
 let guessArr = [];
 let secretArr = [];
 let rounds = 0;
@@ -129,6 +130,7 @@ function evaluateInput(event) {
     if (guessValue.length === 4) {
         errContainer.innerHTML = "";
         rounds++;
+        roundsRemains.innerHTML = `Tippelési lehetőség: ${10 - rounds}`;
         guessArr = [];
         guessArr = [...guessValue].map(num => parseInt(num));
         const matchArr = match(secretArr, guessArr);
@@ -144,6 +146,7 @@ function evaluateInput(event) {
         }
 
         showResult(whiteSquares, blackSquares, emptySquares);
+        guessInput.value = '';
     } else {
         errContainer.innerHTML = '<p class="err">Négy számjegyből kell állnia a kódnak.</p>';
     }
@@ -164,10 +167,11 @@ function newGame(event) {
 
     secretArr = [];
     guessArr = [];
-    guessInput.value = 0;
+    guessInput.value = '';
     winnOutput.innerHTML = '';
     rounds = 0;
     resultOutput.innerHTML = '';
+    roundsRemains.innerHTML = `Tippelési lehetőség: 10`;
 
     if (resultContainer.classList.contains("result-container-show")) {
         resultContainer.classList.remove("result-container-show");

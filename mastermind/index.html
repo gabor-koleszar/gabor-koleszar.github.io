@@ -38,9 +38,10 @@
         <div class="guess guess-hidden js-guess">
             <form action="#" class="guess-form js-guess-form">
                 <div class="js-err"></div>
-                <input type="number" name="guess-num" class="code-input">
-                <button type="submit" class="btn js-start-game-btn">Indít</button>
+                <input type="number" name="guess-num" class="code-input" placeholder="1234" min="0" max="9999">
+                <button type="submit" class="btn js-start-game-btn">Tipp</button>
             </form>
+            <div class="rounds-remains js-rounds-remains">Tipp lehetőség: 10</div>
         </div>
         <div class="result-container result-container-hidden js-result-container">
             <div class="result js-result"></div>

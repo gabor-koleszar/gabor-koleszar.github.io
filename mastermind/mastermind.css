@@ -15,6 +15,7 @@ html {
 body {
     font-size: 1.1rem;
     font-family: 'Ubuntu', sans-serif;
+    min-width: 250px;
 }
 
 .main-header {
@@ -144,6 +145,10 @@ h2 {
     border: 2px solid rgb(100, 87, 15);
 }
 
+.code-input::placeholder {
+    color: rgb(240, 176, 176);
+}
+
 .result-heading {
     padding: 1rem 3rem;
 }
@@ -173,6 +178,12 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.rounds-remains {
+    color: rgb(104, 9, 9);
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
 }
 
 .square-container,
@@ -253,6 +264,10 @@ h2 {
     [type="number"] {
         width: auto;
     }
+
+    .rounds-remains {
+        margin-top: auto;
+    }
 }
 
 @media (min-width: 500px) {
@@ -298,6 +313,10 @@ h2 {
         width: 3rem;
         height: 3rem;
         font-size: 3rem;
+    }
+
+    .rounds-remains {
+        font-size: 1.8rem;
     }
 
     .winn {
