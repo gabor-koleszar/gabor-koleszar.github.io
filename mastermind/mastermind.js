@@ -127,7 +127,7 @@ function evaluateInput(event) {
     
     const guessValue = guessInput.value;
 
-    if (guessValue.length === 4) {
+    if (guessValue.length === 4 && !guessValue.includes('e')) {
         errContainer.innerHTML = "";
         rounds++;
         roundsRemains.innerHTML = `Tippelési lehetőség: ${10 - rounds}`;
