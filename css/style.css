@@ -24,6 +24,7 @@ html{
 }
 
 body {
+    min-width: 300px;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
     background-color: rgb(26, 26, 26);
@@ -162,7 +163,8 @@ main{
 }
 
 .content-box {
-    margin-bottom: 5rem;
+    min-height: 100vh;
+    padding-top: 20rem;
 }
 
 .about {
@@ -188,16 +190,6 @@ main{
     max-width: 300px;
     height: auto;
     border-radius: 5px;
-    /* margin: 2rem auto; */
-}
-
-.photo-gradient-layer {
-    width: 250px;
-    height: 100%;
-    background-image: radial-gradient(rgba(66, 62, 59, 0) 40%, var(--color-dark-gray) 100%);
-    position: absolute;
-    top: 0;
-    z-index: 40;
 }
 
 .about-txt {
@@ -273,7 +265,7 @@ a.btn-head:hover {
     color: var(--color-cream-dark);
 }
 
-#contact {
+.contact {
     background-color: var(--color-main-font);
     color: var(--color-dark-gray);
     padding: 1.5rem;
@@ -424,12 +416,6 @@ footer {
         height: 336px;
         margin: 0;
     }
-
-    /* .photo-gradient-layer {
-        width: 240px;
-        height: 336px;
-        background-image: radial-gradient(rgba(66, 62, 59, 0) 50%, var(--color-dark-gray) 70%);
-    } */
 
     .about-txt {
         margin-top: 6rem;

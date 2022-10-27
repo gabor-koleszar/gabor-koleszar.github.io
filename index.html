@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koleszár Gábor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -37,11 +37,10 @@
             <h2>Magamról</h2>
             <div class="photo-container">
                 <img src="./img/cv.png" alt="Koleszár Gábor" class="photo">
-                <div class="photo-gradient-layer"></div>
             </div>
             <div class="about-txt">
                 <p>Évek óta foglalkozom webfejlesztéssel. Eleinte saját magamtól, az internetet segítségül 
-                    hívva kezdtem tanulmányozni a <strong>HTML</strong> és <strong>CSS</strong> nyelveket. Statikus weeblapokat készítettem 
+                    hívva kezdtem tanulmányozni a <strong>HTML</strong> és <strong>CSS</strong> nyelveket. Statikus weblapokat készítettem 
                     saját szórakoztatásomra.
                 </p>
                 <p>
@@ -150,24 +149,26 @@
             </section>
         </section>
         <section id="contact" class="content-box">
-            <h2>Kapcsolat</h2>
-            <form action="https://formspree.io/f/xdobqvwd" method="post" class="contact-form">
-                <div class="form-element">
-                    <label for="full-name">Név:</label>
-                    <input type="text" name="full-name" id="full-name" class="form-field" placeholder="Az ön teljes neve..." required>
-                </div>
-                <div class="form-element">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="form-field" placeholder="Az ön email címe..." required>
-                </div>
-                <div class="form-elemet">
-                    <label for="msg">Üzenet:</label>
-                    <textarea name="msg" id="msg" class="form-field msg-box" placeholder="Az ön üzenete..." required></textarea>
-                </div>
-                <div class="form-element">
-                    <input type="submit" name="send-msg" value="Küldés" class="btn btn-form">
-                </div>
-            </form>
+            <div class="contact">
+                <h2>Kapcsolat</h2>
+                <form action="https://formspree.io/f/xdobqvwd" method="post" class="contact-form">
+                    <div class="form-element">
+                        <label for="full-name">Név:</label>
+                        <input type="text" name="full-name" id="full-name" class="form-field" placeholder="Az ön teljes neve..." required>
+                    </div>
+                    <div class="form-element">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" class="form-field" placeholder="Az ön email címe..." required>
+                    </div>
+                    <div class="form-elemet">
+                        <label for="msg">Üzenet:</label>
+                        <textarea name="msg" id="msg" class="form-field msg-box" placeholder="Az ön üzenete..." required></textarea>
+                    </div>
+                    <div class="form-element">
+                        <input type="submit" name="send-msg" value="Küldés" class="btn btn-form">
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
@@ -183,5 +184,6 @@
         </div>
         <div class="copyrights">Koleszár Gábor &copy;</div>
     </footer>
+    <script src="js/hamburger.js"></script>
 </body>
 </html>
