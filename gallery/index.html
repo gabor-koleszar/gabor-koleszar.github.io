@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képes Lap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="head-nav">
+            <h1 class="head-title"><a href="index.html">Képes Lap</a></h1>
+            <input type="checkbox" id="hamburger-menu">
+            <label for="hamburger-menu" class="hamburger-btn">
+                <span class="hamburger-line line-one"></span>
+                <span class="hamburger-line line-two"></span>
+                <span class="hamburger-line line-three"></span>
+            </label>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html" class="active">Főoldal</a></li>
+                <li class="menu-item"><a href="nature.html">Természet</a></li>
+                <li class="menu-item"><a href="protrait.html">Portrék</a></li>
+                <li class="menu-item"><a href="vehicles.html">Járművek</a></li>
+                <li class="menu-item"><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+        <section class="current-page">
+            <h2>Főoldal</h2>
+        </section>
+        <section class="banner">
+            <div class="banner-container">
+                <h2>Képes Lap</h2>
+                <p>Amit nem láthatsz élőbe, mi megmutatjuk</p>
+                <a href="./contact.html#rank" class="rank-btn">Értékelem az oldalt</a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section>
+            <h2>Természet</h2>
+            <p class="teaser">Böngéssz a természet csodái között.</p>
+            <div class="image-container">
+                <div class="image-box">
+                    <a href="nature.html"><img src="./img/nature_1.jpg" alt="völgytó"></a>
+                </div>
+                <div class="image-box">
+                    <a href="nature.html"><img src="./img/nature_2.jpg" alt="hegyek, napfelkelte"></a>
+                </div>
+                <div class="image-box">
+                    <a href="nature.html"><img src="./img/nature_3.jpeg" alt="virágok a hegyoldalban"></a>
+                </div>
+            </div>
+            <a href="nature.html" class="forward"><span class="forward-txt">Megnézem a többit</span> <i class="fa-solid fa-angles-right"></i></a>
+        </section>
+        <section>
+            <h2>Portrék</h2>
+            <p class="teaser">Tekints meg emberi pillanatokat.</p>
+            <div class="image-container">
+                <div class="image-box">
+                    <a href="./protrait.html" target="_blank"><img src="./img/portrait_1.jpeg" alt="völgytó"></a>
+                </div>
+                <div class="image-box">
+                    <a href="./protrait.html" target="_blank"><img src="./img/portrait_2.jpg" alt="hegyek, napfelkelte"></a>
+                </div>
+                <div class="image-box">
+                    <a href="./protrait.html" target="_blank"><img src="./img/portrait_3.jpeg" alt="virágok a hegyoldalban"></a>
+                </div>
+            </div>
+            <a href="./protrait.html" class="forward"><span class="forward-txt">Megnézem a többit</span> <i class="fa-solid fa-angles-right"></i></a>
+        </section>
+        <section>
+            <h2>Járművek</h2>
+            <p class="teaser">Látogass el a csodálatos járművek világába.</p>
+            <div class="image-container">
+                <div class="image-box">
+                    <a href="./vehicles.html" target="_blank"><img src="./img/vehicle_1.jpg" alt="autó"></a>
+                </div>
+                <div class="image-box">
+                    <a href="./vehicles.html" target="_blank"><img src="./img/vehicle_2.jpg" alt="alfa romeo"></a>
+                </div>
+                <div class="image-box">
+                    <a href="./vehicles.html" target="_blank"><img src="./img/vehicle_3.jpg" alt="piros vonat"></a>
+                </div>
+            </div>
+            <a href="./vehicles.html" class="forward"><span class="forward-txt">Megnézem a többit</span> <i class="fa-solid fa-angles-right"></i></a>
+        </section>
+        <div class="rank-ribbon">
+            <p>Értékeld oldalunkat</p>
+            <a href="./contact.html#rank" class="rank-btn">Értékem</a>
+        </div>
+    </main>
+    <footer>
+        <ul class="footer-menu">
+            <li class="footer-menu-item"><a href="index.html">Főoldal</a></li>
+            <li class="footer-menu-item"><a href="nature.html">Természet</a></li>
+            <li class="footer-menu-item"><a href="protrait.html">Portrék</a></li>
+            <li class="footer-menu-item"><a href="vehicles.html">Járművek</a></li>
+            <li class="footer-menu-item"><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+        <p class="copyright">Copyright &copy; Koleazár Gábor</p>
+    </footer>
+</body>
+</html>

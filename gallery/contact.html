@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képes Lap - Kapcsolat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="head-nav">
+            <h1 class="head-title"><a href="index.html">Képes Lap</a></h1>
+            <input type="checkbox" id="hamburger-menu">
+            <label for="hamburger-menu" class="hamburger-btn">
+                <span class="hamburger-line line-one"></span>
+                <span class="hamburger-line line-two"></span>
+                <span class="hamburger-line line-three"></span>
+            </label>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Főoldal</a></li>
+                <li class="menu-item"><a href="nature.html">Természet</a></li>
+                <li class="menu-item"><a href="protrait.html">Portrék</a></li>
+                <li class="menu-item"><a href="vehicles.html">Járművek</a></li>
+                <li class="menu-item"><a href="contact.html" class="active">Kapcsolat</a></li>
+            </ul>
+        </nav>
+        <section class="current-page">
+            <h2>Kapcsolat</h2>
+        </section>
+        <section class="banner">
+            <div class="banner-container">
+                <h2>Képes Lap</h2>
+                <p>Amit nem láthatsz élőbe, mi megmutatjuk</p>
+                <a href="./contact.html#rank" class="rank-btn">Értékelem az oldalt</a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="form_container">
+            <h2>Kapcsolat</h2>
+            <form action="#" method="post" class="contact_form">
+                <div class="form_element">
+                    <label>
+                        <span>Név:</span>
+                        <input type="text" name="name" class="form_field" placeholder="Név...">
+                    </label>
+                </div>
+                <div class="form_element">
+                    <label>
+                        <span>Email:</span>
+                        <input type="email" name="email" class="form_field" placeholder="Email...">
+                    </label>
+                </div>
+                <div class="form_element">
+                    <label>
+                        <span>Üzenet:</span>
+                        <textarea name="msg" class="form_area" placeholder="Üzenet..."></textarea>
+                    </label>
+                </div>
+                <input type="submit" name="send" value="Send" class="form_btn rank-btn">
+            </form>
+        </section>
+        <section id="rank">
+            <h2 class="rank_title">Értékelés</h2>
+            <div class="rank_stars">
+                <i class="fa-solid fa-star rank_star_filled"></i>
+                <i class="fa-solid fa-star rank_star_empty"></i>
+                <i class="fa-solid fa-star rank_star_empty"></i>
+                <i class="fa-solid fa-star rank_star_empty"></i>
+                <i class="fa-solid fa-star rank_star_empty"></i>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul class="footer-menu">
+            <li class="footer-menu-item"><a href="index.html">Főoldal</a></li>
+            <li class="footer-menu-item"><a href="nature.html">Természet</a></li>
+            <li class="footer-menu-item"><a href="protrait.html">Portrék</a></li>
+            <li class="footer-menu-item"><a href="vehicles.html">Járművek</a></li>
+            <li class="footer-menu-item"><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+        <p class="copyright">Copyright &copy; Koleazár Gábor</p>
+    </footer>
+</body>
+</html>
